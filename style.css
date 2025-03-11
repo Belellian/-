@@ -1,17 +1,33 @@
-
+/* Градиентный фон */
 body {
   font-family: Roboto, sans-serif;
+  background: linear-gradient(45deg, #ff69b4, #6a0dad);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.merch {
-  color: rgb(114, 89, 202);
-}
-
+/* Контейнер для текста */
 .container {
   padding: 0 40px;
   margin-left: 100px;
 }
 
+/* Оформление текста в рамке */
+p, h1, h2, .contacts {
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Полупрозрачная белая рамка */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px); /* Эффект стекла */
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* Заголовки */
 h1 {
   font-size: 30px;
 }
@@ -21,47 +37,51 @@ h2 {
   margin: 25px 0;
 }
 
-
-  /* Свойства фотографии*/
+/* Свойства фотографии */
 .photo {
   border-radius: 100px;
-  /* Радиус скругления */
   border: 3px solid transparent;
-  /* Параметры рамки */
-  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.52);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.52);
   object-fit: cover;
 }
 
-  /* Эффект наведения на картинку */
+/* Эффект наведения на картинку */
 .photo:hover {
   border: 3px solid #fff570;
 }
 
-  /* Свойства ссылок */
+/* Свойства ссылок */
 a {
   display: block;
-  text-decoration:none;
+  text-decoration: none;
   margin-bottom: 35px;
   position: relative;
+  color: white;
+  font-weight: bold;
 }
 
-.button {
-  /* фон для кнопки */
-  background-color: #f5cdf1;
-}
-  /* Что делать при наведении на ссылку */
+/* Что делать при наведении на ссылку */
 a:hover {
-  color:rgb(247, 205, 113);
- }
-
-  /* Этим свойством добавляем подчеркивание через создание псевдокласса */
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  transform: translateY(1.5em);
-  border-bottom: 1px solid #dadada;
-  width: 300px;
+  color: rgb(247, 205, 113);
 }
 
+
+/* Красивая объемная кнопка */
+.button {
+  background: linear-gradient(180deg, #ffb6c1, #ff69b4);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Эффект нажатия */
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
